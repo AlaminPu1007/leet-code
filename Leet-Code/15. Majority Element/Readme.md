@@ -36,4 +36,4 @@ then return copyNum <br>
 **Complexity :** <br>
 
 T.C -> O(N)<br>
-S.C -> O(N)<br>
+S.C -> O(1)<br>
