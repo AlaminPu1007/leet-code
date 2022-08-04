@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+
+int singleNumber(vector<int>& num) {
+    bool flag = false;
+    sort(num.begin(),num.end());
+        
+        for(int i = 0;i<num.size()-1;i++)
+        {
+            if(num[i]==num[i+1])
+            {
+               flag = true;
+            }else
+            {
+                if(!flag)
+                {
+                    return num[i];
+                }else
+                    flag = false;
+            }
+        }
+     return num[num.size()-1];
+}
+};
+
+int main(void)
+{
+    Solution obj;
+    vector<int>arr = {0,1,0,1,0,1,99};
+    obj.singleNumber(arr);
+    return 0;
+}
