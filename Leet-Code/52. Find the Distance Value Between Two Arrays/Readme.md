@@ -10,7 +10,15 @@ The distance value is defined as the number of elements arr1[i] such that there 
 **Approach-1 :**<br>
 To solving this problem, we need to used brute force method.The idea behind of it, whenever we get true response we have to just decrement first array size value by 1 and need to stop inner loop by using break key-work and so no<br>
 
+**Approach-2 :**<br>
+We need to sort our second array and apply binary-search algorithm on it and so no.
+lear more about BS -> https://www.geeksforgeeks.org/binary-search/
+
 **Complexity :**<br>
 -First Approach
 Time-Complexity: O(n^2)<br>
+Space-Complexity: O(1)<br>
+
+-Second Approach
+Time-Complexity: O(n log(n))<br>
 Space-Complexity: O(1)<br>
