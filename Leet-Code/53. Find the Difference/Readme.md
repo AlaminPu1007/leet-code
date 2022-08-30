@@ -13,4 +13,4 @@ Then loop through second string and find-out which character is present inside o
 
 **Complexity :**<br>
 Time-Complexity :O(n)<br>
-Space-Complexity :O(n)<br>
+Space-Complexity :O(1)<br>
