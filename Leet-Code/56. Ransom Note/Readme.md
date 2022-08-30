@@ -14,4 +14,4 @@ Other wise return true<br>
 
 **Complexity :**<br>
 Time-Complexity :O(n)<br>
-Space-Complexity :O(n)<br>
+Space-Complexity :O(1)<br>
