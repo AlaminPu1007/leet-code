@@ -23,6 +23,17 @@ for i := 0 to len-1
 return false
 ```
 
+**Approach - 2:**<br>
+
+- push each element inside hash-table
+- count number of zero element present inside of original array, if its length greater 1, return true
+- loop through hash-map and each item multiply by 2 to check it's already present inside our map or not, it it's just return true
+- else return false
+
 **Complexity for Approach - 1 :**<br>
 Time-Complexity: O(n^2)<br>
-Space-Complexity: O(1)<br>
+Space-Complexity: O(1)<br><br>
+
+**Complexity for Approach -2 :**<br>
+Time-Complexity: O(n)<br>
+Space-Complexity: O(n)<br>
