@@ -12,3 +12,7 @@ Problem link: https://leetcode.com/problems/find-k-closest-elements/
 **Complexity, Approach-1 :**<br>
 Time-Complexity: `O(n*log(n))` <br>
 Space-Complexity: `O(n)` <br>
+
+**Complexity, Approach-1 :**<br>
+Time-Complexity: `O(log(n))` //for finding left value by using binary search algorithm, and O(n) for pushing element in new array<br>
+Space-Complexity: `O(n)`<br>
