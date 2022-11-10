@@ -8,7 +8,7 @@ public:
         {
             string ans = s;
             for(int i = 0; s[i] != '\0'; i++)
-                ans = min(ans, s.substr(i)+ s.substr(0,i));
+                ans = min(ans, s.substr(i) + s.substr(0,i));
                 
             return ans;
         }
