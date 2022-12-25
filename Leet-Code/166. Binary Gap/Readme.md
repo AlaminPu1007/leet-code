@@ -1,6 +1,6 @@
 ## Binary Gap
 
-[Visit Problem](https://leetcode.com/problems/binary-gap/description/)
+[Open Problem](https://leetcode.com/problems/binary-gap/description/)
 
 **Approach-1 :**<br>
 
