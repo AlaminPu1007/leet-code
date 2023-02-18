@@ -6,7 +6,8 @@ class Solution
 public:
     int countOdds(int low, int high)
     {
-        // Check if low is odd. This could be easily checked using % operator, but we used bit wise operator & as they are more efficient.
+        // Check if low is odd. This could be easily checked using % operator, 
+        // but we used bit wise operator & as they are more efficient.
         if (!(low & 1))
             low++;
 
