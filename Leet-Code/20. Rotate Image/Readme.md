@@ -19,5 +19,5 @@ swap is a predefined library function.<br>
 Then, Reverse array row by using reverse method.Its also an library method.<br>
 
 **Complexity :**<br>
-T.C : O(n)
-S.C: O(1)
+Time-Complexity : `O(n*m)`
+Space-Complexity: `O(1)`
