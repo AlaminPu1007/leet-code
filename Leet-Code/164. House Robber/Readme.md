@@ -35,3 +35,23 @@ Change the array to store, what is the maximal money you can rob for now. Theref
 
 -   Time-Complexity: `O(n) - The time complexity of this approach is O(n), where n is the number of houses. This is because each house is visited only once in the dynamic programming recursion.
 -   Space-Complexity: `O(n) - The time complexity of this approach is O(N), where N is the dp array
+
+## Tabulation Approach
+
+1. Initialize a vector `dp` of size `n`, where `n` is the number of houses. Each element of `dp` will represent the maximum amount of money that can be robbed up to and including the `i`-th house.
+2. Initialize `dp[0]` with the value of the first house, as there is only one house to rob initially.
+3. Iterate through the houses starting from the second house (`i = 1`) up to the last house:
+    - For each house `i`, calculate the maximum amount of money that can be robbed:
+        - `pick`: The amount of money that can be robbed if the current house is chosen. This is the value of the current house `nums[i]`, plus the maximum amount that can be robbed from the house `i - 2` (if `i > 1`).
+        - `notPick`: The maximum amount that can be robbed without choosing the current house, which is the maximum amount that can be robbed from the house `i - 1`.
+    - Update `dp[i]` to be the maximum of `pick` and `notPick`.
+4. Return `dp[n - 1]`, which represents the maximum amount of money that can be robbed from all the houses.
+
+**Complexity Analysis :**<br/>
+
+-   Time-Complexity: `O(n) - The time complexity of this approach is O(n), where n is the number of houses. This is because each house is visited only once in the dynamic programming recursion.
+-   Space-Complexity: `O(n) - The time complexity of this approach is O(N), where N is the dp array
+
+**References :**<br/>
+
+-   [From a blog](https://takeuforward.org/data-structure/maximum-sum-of-non-adjacent-elements-dp-5/)

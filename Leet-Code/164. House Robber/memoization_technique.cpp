@@ -5,43 +5,33 @@ class Solution
 {
 
 public:
-  int rob(vector<int> &nums)
-  {
-    int n = nums.size();
-    vector<int> dp(n, -1);
-    if (n == 0)
-      return 0;
+    int rob(vector<int> &nums)
+    {
+        int n = nums.size();
+        vector<int> dp(n, 0);
 
-    return DFS(n - 1, nums, dp);
-  }
+        dp[0] = nums[0];
 
-private:
-  int DFS(int i, vector<int> &nums, vector<int> &dp)
-  {
+        for (int i = 1; i < n; i++)
+        {
+            int pick = nums[i];
 
-    if (i == 0)
-      return nums[i];
+            if (i > 1)
+                pick += dp[i - 2];
 
-    if (i < 0)
-      return 0;
+            int notPick = 0 + dp[i - 1];
 
-    if (dp[i] != -1)
-      return dp[i];
+            dp[i] = max(pick, notPick);
+        }
 
-    // if we pick the current item
-    int pick = nums[i] + DFS(i - 2, nums, dp);
-
-    // if not choosen the current item
-    int notPick = 0 + DFS(i - 1, nums, dp);
-
-    return dp[i] = max(pick, notPick);
-  }
+        return dp[n - 1];
+    }
 };
 
 int main(void)
 {
-  Solution obj;
-  vector<int> arr = {2, 7, 9, 3, 1};
-  cout << obj.rob(arr) << endl;
-  return 0;
+    Solution obj;
+    vector<int> arr = {1, 2, 3, 1};
+    cout << obj.rob(arr) << endl;
+    return 0;
 }
